@@ -24,11 +24,22 @@ Quick start
         'DB': 'dbname'
     }
 
-3. [optional] Include the Odoo authentication backend in your project settings like this::
+3. Add CACHE server like this::
+
+    It is recommended to set PyMemcacheCache as caching backend, others are not supported
+
+    CACHES = {
+        'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
+        'LOCATION': 'SERVER_ADDR:PORT',
+    }
+}
+
+4. [optional] Include the Odoo authentication backend in your project settings like this::
 
     AUTHENTICATION_BACKENDS = ('djangodoo.auth.OdooAuthBackend')
 
-4. Define a model like this::
+5. Define a model like this::
 
     from djangodoo.models import OdooModel
     
