@@ -33,7 +33,6 @@ Quick start
         'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
         'LOCATION': 'SERVER_ADDR:PORT',
     }
-}
 
 4. [optional] Include the Odoo authentication backend in your project settings like this::
 
